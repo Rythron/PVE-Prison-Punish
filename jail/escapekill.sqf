@@ -6,11 +6,13 @@ waitUntil {inJail};
 sleep 2;
 
 waitUntil {_unit distance Prison > 105};
+//DZE Piggd Banking System  2 briefcases begin
 _array = _this;
 _source = _array select 0;
 _cost = -(20000);
 PVDZE_send = [_source,"Humanity",[_source,_cost,0]];
 publicVariableServer "PVDZE_send";
+//DZE Piggd Banking System 2 briefcases end
 call dayz_forceSave;
 if ((inJail) && (alive _unit) && (_unit distance jail_center_H > 105)) then {
 
