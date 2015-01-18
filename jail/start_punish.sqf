@@ -6,6 +6,7 @@ isKiller = true;
 
 jail = [_unit] execVM "addons\jail\killer.sqf";
 shield =[_unit] execVM "addons\jail\shield.sqf";
+sleep 12;
 escapee = [_unit] execVM "addons\jail\escapee.sqf";
 escapekill = [_unit] execVM "addons\jail\escapekill.sqf";
 
