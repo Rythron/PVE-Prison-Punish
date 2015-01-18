@@ -13,15 +13,13 @@ _cost = -(20000);
 PVDZE_send = [_source,"Humanity",[_source,_cost,0]];
 publicVariableServer "PVDZE_send";
 //DZE Piggd Banking System 2 briefcases end
-call dayz_forceSave;
 if ((inJail) && (alive _unit) && (_unit distance jail_center_H > 105)) then {
 
 	_sfx="dieScream";
 	_nul = [objNull, _unit, rSAY, _sfx] call RE;
 	
 	sleep 2.7;
-    call dayz_forceSave;
-	_sfx="finalShot";
+ 	_sfx="finalShot";
 	_nul = [objNull, _unit, rSAY, _sfx] call RE;
 	sleep 0.5;
 
