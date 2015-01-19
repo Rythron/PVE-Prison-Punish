@@ -16,6 +16,8 @@ after escape from prison and if they end up death they loose 2 briefcases.
 in server_playerDied.sqf
 
 Place this 
+"Special thanks to Vampire for this code!"
+
 if (_killer isKindOf "Man") then {
    [_killer] execVM "addons\jail\start_punish.sqf"
 } else {
@@ -29,11 +31,8 @@ if (_killer isKindOf "Man") then {
      [(driver _killer)] execVM "addons\jail\start_punish.sqf"
    };
 };
-"Special thanks to Vampire for this code!"
-below
-_killer = _victim getVariable["AttackedBy", "nil"];
-_killerName = _victim getVariable["AttackedByName", "nil"];
 
+ at the bottom in your server_playerDied.sqf
 
 add the prison.sqf to your custom maps	
 and add this to your server_functions.sqf at the bottom
