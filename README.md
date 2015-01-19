@@ -41,11 +41,7 @@ if (_killer isKindOf "Man") then {
    };
 };
 "Special thanks to Vampire for this code!"
-below 
-_killer = _victim getVariable["AttackedBy", "nil"];
-_killerName = _victim getVariable["AttackedByName", "nil"];
-
-in server_playerDied.sqf
+At the bottom in server_playerDied.sqf
 
 The prison it self.
 http://epochmod.com/forum/index.php?/topic/6391-pavlovo-prison/?hl=%2Bpavlovo+%2Bprison
