@@ -13,24 +13,33 @@ i Have the DZE Piggd Banking System http://epochmod.com/forum/index.php?/topic/1
 So after a kill they loose 1 briefcase money
 after escape from prison and if they end up death they loose 2 briefcases.
 
-in server_playerDied.sqf
-
 Place this 
-"Special thanks to Vampire for this code!"
 
-if (_killer isKindOf "Man") then {
-   [_killer] execVM "addons\jail\start_punish.sqf"
+if ((side _killer) == EAST) exitwith {
+    diag_log "Bots dont go to jail!";
+};
+
+if ((side _killer) == WEST) then {
+    sleep 8;
+   [_killer] execVM "custom\jail\start_punish.sqf"
 } else {
-   if ((count crew _killer) > 1) then {
-     if ((gunner _killer) in (crew _killer)) then {
-       [(gunner _killer)] execVM "addons\jail\start_punish.sqf"
+   if (((count crew _killer) > 1) && ((side _killer) == WEST)) then {
+     if (((gunner _killer) in (crew _killer)) && ((side _killer) == WEST)) then {
+        sleep 8;
+       [(gunner _killer)] execVM "custom\jail\start_punish.sqf"
      } else {
-       [(driver _killer)] execVM "addons\jail\start_punish.sqf"
+        sleep 8;
+       [(driver _killer)] execVM "custom\jail\start_punish.sqf"
      };
    } else {
-     [(driver _killer)] execVM "addons\jail\start_punish.sqf"
+        sleep 8;
+        [(driver _killer)] execVM "custom\jail\start_punish.sqf"
    };
 };
+"Special thanks to Vampire and seelenapparat for this code!"
+
+
+add the bottom in server_playerDied.sqf
 
  at the bottom in your server_playerDied.sqf
 
