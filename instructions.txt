@@ -38,9 +38,6 @@ if ((side _killer) == WEST) then {
 };
 "Special thanks to Vampire and seelenapparat for this code!"
 
-
-add the bottom in server_playerDied.sqf
-
  at the bottom in your server_playerDied.sqf
 
 add the prison.sqf to your custom maps	
