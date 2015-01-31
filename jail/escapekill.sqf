@@ -5,7 +5,7 @@ waitUntil {inJail};
 
 sleep 2;
 
-waitUntil {_unit distance Prison > 105};
+waitUntil {_unit distance jail_center_H > 105};
 //DZE Piggd Banking System  2 briefcases begin
 _array = _this;
 _source = _array select 0;
